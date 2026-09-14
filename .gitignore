@@ -1,0 +1,35 @@
+# Datasets (see data/README.md for how to obtain them)
+data/*.mat
+data/*.npy
+data/*.npz
+data/*.wav
+
+# Training outputs
+output/
+*.pth
+*.pt
+*.ckpt
+*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+log_rank*.txt

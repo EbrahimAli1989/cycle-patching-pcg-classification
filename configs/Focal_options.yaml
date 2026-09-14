@@ -1,0 +1,43 @@
+# Default training configuration for the cycle-patching / domain-balanced
+# training with tracking (DBTT) PCG classifier.
+#
+# Values follow the training setup reported in the paper: AdamW optimizer,
+# cosine LR schedule, 500 epochs, batch size 32. Note that the FocalNet
+# architecture hyperparameters actually used at construction time (depth=2,
+# embed_dim=96, focal_level=3, focal_window=3, two branches for horizontal
+# and vertical patching) are passed directly in `train.py::main()` when the
+# model is built, not read from this file -- MODEL.FOCAL.* below is kept for
+# reference/compatibility with the underlying FocalNet config schema
+# (config.py) and is not consumed by Signals_FocalNet.
+DATA:
+  BATCH_SIZE: 32
+  DATASET: 'phonocardiogram'
+
+MODEL:
+  TYPE: 'focal'
+  NAME: 'signals_focalnet'
+  NUM_CLASSES: 2
+  DROP_PATH_RATE: 0.1
+  LABEL_SMOOTHING: 0.1
+
+TRAIN:
+  EPOCHS: 500
+  WARMUP_EPOCHS: 20
+  WEIGHT_DECAY: 0.05
+  BASE_LR: 1.0e-4
+  WARMUP_LR: 5.0e-7
+  MIN_LR: 5.0e-6
+  CLIP_GRAD: 5.0
+  AUTO_RESUME: True
+  OPTIMIZER:
+    NAME: 'adamw'
+  LR_SCHEDULER:
+    NAME: 'cosine'
+
+AUG:
+  MIXUP: 0
+  CUTMIX: 0
+
+SAVE_FREQ: 20
+PRINT_FREQ: 100
+SEED: 0

@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+preferred-citation:
+  type: article
+  title: "Cycle-Patching and Domain-Balance with Tracking for Phonocardiogram Classification"
+  authors:
+    - family-names: "Nehary"
+      given-names: "Ebrahim A."
+    - family-names: "Rajan"
+      given-names: "Sreeraman"
+  journal: "IEEE Open Journal of Instrumentation and Measurement"
+  year: 2026
+  # TODO: fill in once assigned at publication (currently in minor revision).
+  doi: ""
+  volume: ""
+  issue: ""
+  start: ""
+  end: ""
+authors:
+  - family-names: "Nehary"
+    given-names: "Ebrahim A."
+  - family-names: "Rajan"
+    given-names: "Sreeraman"
+title: "Cycle-Patching PCG Classification"
+date-released: 2026-09-14

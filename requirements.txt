@@ -1,0 +1,25 @@
+# Core dependencies for train.py and everything it imports
+# (Focal_Net.py, Load_multiple_cycles.py, config.py, custom_lr_scheduler.py,
+# custom_optimizer.py, logger.py, custom_utils.py, metrics.py).
+#
+# Install PyTorch separately first if you need a specific CUDA build, e.g.:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+# See https://pytorch.org/get-started/locally/ for the command matching your GPU/CUDA.
+torch>=2.0
+torchvision>=0.15
+timm>=0.6,<0.9
+yacs>=0.1.8
+PyYAML>=5.4
+numpy>=1.23
+pandas>=1.5
+scipy>=1.9
+scikit-learn>=1.1
+matplotlib>=3.5
+tqdm>=4.64
+
+# Utils_fns.py (legacy/reference file, not imported by train.py -- see
+# README.md > "Repository notes") additionally needs tensorflow, keras and
+# imageio if you want to import it directly. Uncomment if you need it:
+# tensorflow>=2.10
+# keras>=2.10
+# imageio>=2.19

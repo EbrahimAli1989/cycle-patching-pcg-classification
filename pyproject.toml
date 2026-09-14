@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cycle-patching-pcg"
+version = "0.1.0"
+description = "Cycle-patching, domain-balanced training with tracking, and a dual-branch focal modulation transformer for PCG classification"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Ebrahim A. Nehary" }]
+
+dependencies = [
+    "torch>=2.0",
+    "torchvision>=0.15",
+    "timm>=0.6,<0.9",
+    "yacs>=0.1.8",
+    "PyYAML>=5.4",
+    "numpy>=1.23",
+    "pandas>=1.5",
+    "scipy>=1.9",
+    "scikit-learn>=1.1",
+    "matplotlib>=3.5",
+    "tqdm>=4.64",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
